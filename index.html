@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Peter Schuelke</title>
+	<link rel="icon" type="image/gif" href="images/logo_fav.gif">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>	
+  <meta name="description" content="HTML5 Doc">
+  <meta name="author" content="WDIM363 Group 1">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/validateForm.js"></script>
+
+  <script>
+		$(function() {
+			
+			$('.slide').hide();
+			$('.slide:first').show();
+			$('.home').toggleClass('homehighlight');
+			pageArray = new Array('space','risk','master','snake','html5','mywine');
+			
+			bookAssemble();
+			pageSlide();
+			bookTurn();
+			$('#contactForm').click(function(){
+				return false
+			});
+			$('#submit_form').click(function(){
+				validateForm();
+			});
+			
+		});
+  </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31868571-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+</head>
+<body>
+  <div id="wrapper">
+		<img id="paperclip" src="images/paperclip.png" alt="paperclip">
+    <div id="home_page" class="slide clearfix">
+			<header class="clearfix">
+				<img class= "logo" src="images/logo.jpg" alt="Peter Schuelke Logo">
+				
+				<h1>peter.schuelke</h1>
+				<div class="header-info">
+					<p>web design and development</p>
+					<p>portland, oregon</p>
+					<p><email>peter@peterschuelke.com</email></p>
+				</div>
+			</header>
+			<nav>
+				<ul>
+					<li><p class="home" >home</p></li>
+					<li><p class="portfolio" >portfolio</p></li>
+					<li><p class="about" >about me</p></li>
+					<li><p class="skills" >skills</p></li>
+					<li><p class="contact" >contact me</p></li>
+				</ul>
+			</nav>
+			<div id="home_headline" class="portfolio">
+				<h3>welcome to my portfolio</h3>
+				<p>Take a look inside!</p>
+			</div>
+			<div id="home_about" class="clearfix">
+				<h2>about this site...</h2>
+				<div id="h_a_first">
+					<h3>the page turns</h3>
+					<img src="images/page_turns2.png" alt="booklet thumbnail">
+						<p>I had fun building this. And I could talk a lot about this effect. But to be brief, my goal was to create a page flip that had html content. Not pictures disguised as words. The part of the page under the rings needed to animate under the rings. Likewise the rest of the page needed to animate over the rings. The pages also are alligned a hair off to create depth. The depth is  different on each side, so the animation needs to adjust vertically. The animations need to allow the user to be able to click on any tab to get to any page. Among other nitpicky requirements, it needs to be updated easly. The end result is it works pretty seamlessly using both CSS and jQuery.</p>
+				</div>
+				<div>
+					<h3>distressed buttons</h3>
+					<img src="images/distressed_buttons.jpg" alt="button thumbnail">
+						<p>The navigation buttons are a fun little effect. I am again using CSS and jQuery. The effect is tied into the page slides. The rollover animation is using mulitple backgrounds. The second background shrinks into place by adjuesting the background size. The higlight effect is using yet another background image. The jQuery toggles the class and CSS transitions the background size.</p>
+				</div>
+				<div>
+					<h3>the paperstack</h3>
+					<img src="images/paper_stack.jpg" alt="paperstack thumbnail">
+						<p>The page slides are all jQuery. The HTML is all stacked into divs. The jQuery animates the top page out of frame while revealing and reseting the next page underneath.</p>
+				</div>
+			</div>
+    </div>
+		
+    <div id="portfolio_page" class="slide clearfix">
+      <header>
+				<img class= "logo" src="images/logo.jpg" alt="Peter Schuelke Logo">
+				<h1>peter.schuelke</h1>
+				<div class="header-info">
+					<p>web design and development</p>
+					<p>art institute of portland</p>
+					<p><email>peter@peterschuelke.com</email></p>
+				</div>
+			</header>
+			<nav>
+				<ul>
+					<li><p class="home" >home</p></li>
+					<li><p class="portfolio" >portfolio</p></li>
+					<li><p class="about" >about me</p></li>
+					<li><p class="skills" >skills</p></li>
+					<li><p class="contact" >contact me</p></li>
+				</ul>
+			</nav>
+			<div id="portfolio_headline">
+				<h3>my work</h3>
+				<p>Here is a brief glimps of the type of work I have done. More will be added soon. Be sure to flip through the pages of the notebook below. </p>
+			</div>
+			      <div id="portfolio_book">
+				<div id="rings_top"></div>
+				
+        <!-- Left Pages bottom page listed first-->
+
+					
+				<div class="mywine left main">
+					<h3 class="left_button">design</h3>
+					<h4>website design</h4>
+					<p>I created this for a design and layout class. This site is planned as a wine database that allows users to store and rate wines, then receive wine recommendations on their personal preferences.</p>
+				</div>
+					<div class="mywine left bind">	</div>
+				
+				
+				<div class="html5 left main">
+					<h3 class="left_button">html5</h3>
+					<h4><a href="http://webstudy.pschuelke.webfactional.com/wdim393/index.html" target="_blank" >sematic HTML5 class project</a></h4>
+					<p>This was a group project throughout the course where we were given specific requirements and elements that needed to be on the pages. </p>
+				</div>
+					<div class="html5 left bind">	</div>
+					
+					
+				<div class="snake left main">
+					<h3 class="left_button">snake</h3>
+					<h4><a href="http://snake.pschuelke.webfactional.com/" target="_blank" >javascript snake</a></h4>
+					<p>This was a final project for a JavaScript class. I wrote this game before diving into jQuery and Canvas. After writing the space game in canvas I feel that manipulating DOM elements is about just as much work, since the game logic for both types requires object-oriented programming.This was my first big project using objects. I also built a MySQL database and used some PHP for the high score list.</p>
+				</div>
+					<div class="snake left bind">	</div>
+					
+					
+				<div class="master left main">
+					<h3 class="left_button">logic</h3>
+					<h4><a href="/mastermind" target="_blank" >mastermind</a></h4>
+					<p>I enjoy logic problems. Test your skills in this game by guessing the computer's combination of pegs. This game was written using HTML elements rather than Canvas.</p>
+				</div>
+					<div class="master left bind">	</div>
+					
+					
+				<div class="risk left main">
+					<h3 class="left_button">risk</h3>
+					<h4><a href="/middleearth" target="_blank" >middle earth risk</a></h4>
+					<p>This is a personal project I am currently working on. Right now it does not do much other than add pieces when you click on countries. I am using Raphael.js to draw all the graphics. The advanage is the SVG object become clickable inside the path (border) instead of a generic box. Stay tuned as this becomes a full working multiplayer game utilizing node.js.</p>
+				</div>
+					<div class="risk left bind">	</div>
+					
+					
+				<div class="space left main">
+					<h3 class="left_button">space</h3>
+					<h4><a href="/lightspeed" target="_blank" >canvas space game</a></h4>
+					<p>This project was a lot of fun to develop. It was my first forey into canvas and quite a challenge for our group to complete in an HTML5 class. Essentially, we wrote the game using object-oriented jQuery on a 2D canvas and added 3D variables along with Trig to create depth and realistic motion in the animation.</p>
+				</div>
+					<div class="space left bind">	</div>
+        
+        <!-- Right Pages bottom page listed first-->
+        
+				
+					<div class="space right bind"></div>
+				<div class="space right main">
+					<a href="/lightspeed" target="_blank" >
+						<img src="images/lightspeed.png" alt="Space Game Screen Capture">
+					</a>
+				</div>
+				
+				
+				<div class="risk right bind"></div>
+				<div class="risk right main">
+					<h3 class="right_button">space</h3>
+					<a href="/middleearth" target="_blank" >
+						<img src="images/risk.png" alt="Middle Earth RISK Board">
+					</a>
+				</div>
+				
+        
+        	<div class="master right bind"></div>
+				<div class="master right main">
+					<h3 class="right_button">risk</h3>
+					<a href="/mastermind" target="_blank" >
+						<img src="images/mastermind.png" alt="Mastermind Screen Capture">
+					</a>
+				</div>
+				
+				
+				  <div class="snake right bind"></div>
+				<div class="snake right main">
+					<h3 class="right_button">logic</h3>
+					<a href="http://snake.pschuelke.webfactional.com/" target="_blank" >
+						<img src="images/snake.png" alt="Snake Screen Capture">
+					</a>
+				</div>
+        
+        
+          <div class="html5 right bind" ></div>
+				<div class="html5 right main">
+					<h3 class="right_button">snake</h3>
+					<a href="http://webstudy.pschuelke.webfactional.com/wdim393/index.html" target="_blank" >
+						<img src="images/html5.png" alt="WDIM393 Screen Capture">
+					</a>
+				</div>
+        
+        
+          <div class="mywine right bind"></div>
+				<div class="mywine right main">
+					<h3 class="right_button">html5</h3>
+					<img src="images/mywine.png" alt="mywine Screen Capture">
+				</div>
+
+
+			</div>
+    </div>
+		
+		<div id="about_page" class="slide clearfix">
+      <header>
+				<img class= "logo" src="images/logo.jpg" alt="Peter Schuelke Logo">
+				<h1>peter.schuelke</h1>
+				<div class="header-info">
+					<p>web design and development</p>
+					<p>art institute of portland</p>
+					<p><email>peter@peterschuelke.com</email></p>
+				</div>
+			</header>
+			<nav>
+				<ul>
+					<li><p class="home" >home</p></li>
+					<li><p class="portfolio" >portfolio</p></li>
+					<li><p class="about" >about me</p></li>
+					<li><p class="skills" >skills</p></li>
+					<li><p class="contact" >contact me</p></li>
+				</ul>
+			</nav>
+			<h4>"The day you stop learning is the day your career ends."</h4>
+			<div id="about_main" class="clearfix">
+				<h3>about me</h3>
+				<p>I am a Web Design and Interactive Media major in my 3rd year. At the Art Institute of Portland, I am building my skill set in web development. I have a background in video and live show production. The common link between these careers is a blend of creativity and technicality. I love details, math and problem sloving. I also love making things. Whether it's a bit of code that adds value to a site, getting dirty and building a cabnet for my house or cooking a gourmet meal. And yes those creative things involve presision.</p>
+			</div>
+    </div>
+		
+		<div id="skills_page" class="slide clearfix">
+      <header>
+				<img class= "logo" src="images/logo.jpg" alt="Peter Schuelke Logo">
+				<h1>peter.schuelke</h1>
+				<div class="header-info">
+					<p>web design and development</p>
+					<p>art institute of portland</p>
+					<p><email>peter@peterschuelke.com</email></p>
+				</div>
+			</header>
+			<nav>
+				<ul>
+					<li><p class="home" >home</p></li>
+					<li><p class="portfolio" >portfolio</p></li>
+					<li><p class="about" >about me</p></li>
+					<li><p class="skills" >skills</p></li>
+					<li><p class="contact" >contact me</p></li>
+				</ul>
+			</nav>
+			<div id="skills_headline" class="clearfix">
+				<h3>my skill set...</h3>
+				<p>I love coding and enjoy coding games in my spare time, or when projects allow. I feel that games often push the envelope and drive inovation. Video games are what pushed computers from simple number cruchers to massive multimedia machines. Well, games are at it again pushing the web forward (mobile is pushing it ahaed to). Being in a field that is constantly growing and improving it is imperative to keep learning and luckily its a joy to. While I am a huge fan of blending many scripts and techonogies into a website, each has their role in building the overall experience.</p>
+			</div>
+			<section id="skills_main" class="clearfix">
+				<div class="skill_list clearfix">
+					<header>
+						<img src="images/html_logo.jpg" alt="HTML5">
+						<h4>html semantics</h4>
+					</header>
+					<p>HTML5 brings us context to the content we are placing on the web. This is helpful for search engine optimization and the almighty Google ranking. HTML is the bones of the site and needs to be well structured for a positive user experience and flow of information.</p>
+				</div>
+				<div class="skill_list">
+					<header>
+						<img src="images/css_logo.jpg" alt="CSS5">
+						<h4>css styling</h4>
+					</header>
+					<p>Add some flare and personality to the site. CSS is more than pure aesthetics and making lists pretty. CSS also drives the user experience by adding a visual heirarchy and order to the content. CSS is progressing so far that Flash is becoming irrelavent.</p>
+				</div>
+				<div class="skill_list">
+					<header>
+						<img src="images/jquery_logo.jpg" alt="jQuery">
+						<h4>jquery</h4>
+					</header>
+					<p>JavaScript and jQuery is used to add functionality to a site. There are many dynamic and responsive functions JavaScript can do to add to the user experience. Javascript is a joy to work with because it does so much. It can be used to simply agument an effect like a few on this site. JavaScript is also capable of Object Oriented Programming and can be the framework for some powerful applications, or fun games.</p>
+				</div>
+				<div class="skill_list">
+					<header>
+						<img src="images/php_logo.jpg" alt="php">
+						<h4>php</h4>
+					</header>
+					<p>Creating a dynamic framwork for a site to operate on is where the gold is in web. PHP operating behind the sences and talking to databases to call up content for the webpage is the heart of most websites. Most all Content Management Systems operate with PHP as a base.</p>
+				</div>
+				<div class="skill_list">
+					<header>
+						<img src="images/mysql_logo.jpg" alt="MySQL">
+						<h4>mysql</h4>
+					</header>
+					<p>Databases are fun.(Really?) I just enjoy making things work, and MySQL (and SQL) is where the data can be stored to get work done.</p>
+				</div>
+				<div class="skill_list">
+					<header>
+						<img src="images/acs_logo.jpg" alt="Adobe Creative Suit">
+						<h4>adobe cs</h4>
+					</header>
+					<p>There are many tools available to design and develop websites. Adobe Creative Suite has some of the best tools in Photoshop and Illustrator. I find it easy to loose hours designing and tweaking mocks. Building a mock is a crutial step in the web development process as it could save hours of headache when coding the website.</p>
+				</div>
+			</section>
+		</div>
+		
+		<div id="contact_page" class="slide clearfix">
+      <header>
+				<img class= "logo" src="images/logo.jpg" alt="Peter Schuelke Logo">
+				<h1>peter.schuelke</h1>
+				<div class="header-info">
+					<p>web design and development</p>
+					<p>art institute of portland</p>
+					<p><email>peter@peterschuelke.com</email></p>
+				</div>
+			</header>
+			<nav>
+				<ul>
+					<li><p class="home" >home</p></li>
+					<li><p class="portfolio" >portfolio</p></li>
+					<li><p class="about" >about me</p></li>
+					<li><p class="skills" >skills</p></li>
+					<li><p class="contact" >contact me</p></li>
+				</ul>
+			</nav>
+			<div id="contact_headline" class="clearfix">
+				<h3>drop me a line...</h3>
+				<p>If your interested in inquiring about my serivces, send some feedback, or just want to say hello, I'd love to hear from you.</p>
+			</div>
+				<div id="contact_form" class="clearfix">
+					<h3>your message</h3>
+					<form id="contactForm">
+						<label for="name" >name:</label>
+							<input class="text" type="text" name="name" id="name">
+						<label for="email">email:</label>
+							<input class="text" type="text" name="email" id="email">
+						<label for="email2">re-type email:</label>
+							<input class="text" type="text" name="email2" id="email2">
+						<p id="comment_p"><label for="message">message:</label>
+							<textarea id="message" name="message" rows="9" cols="35" aria-required="true"></textarea></br ></p>
+						<label  for="verify">verify you </br >are not a bot: 4+5=</label>
+							<input class="text" type="text" name="verify" id="verify">
+						<button id="submit_form">submit</button>
+					</form>
+				</div>
+
+    </div>
+  </div>
+</body>
+
+</html>
